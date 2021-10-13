@@ -1,0 +1,153 @@
+.container__nav{
+width: 100px;
+height: 95%;
+position: absolute;
+top: 50%;
+left: 10px;
+transform: translateY(-50%);
+background-color:$navColor;
+border-radius: 1.7rem;
+display: grid;
+overflow: hidden;
+outline: none;
+&__li{
+ position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+transition:all 5s;
+z-index: 2222222;
+-webkit-appearance: none;
+outline: none;
+
+
+ svg{
+   fill:white;
+
+  
+   &.active{
+	
+	   fill:$navActive;
+   }
+   &.dadActive{
+	   fill: black;
+   }
+ }
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+.selector-active{
+	width: 100%;
+    display:inline-block;
+	position:absolute;
+	height: 37px;
+	top: 0px;
+	left:0px;
+	transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: $containerColor;
+	border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+	outline: none;
+	border: none;
+	-webkit-appearance: none;
+ &.dad{
+	 background-color:$dadBackgColor;
+ }
+
+}
+.selector-active .top,
+.selector-active .bottom{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-color:$containerColor;
+	right: 0;
+	outline: none;
+	-webkit-appearance: none;
+
+	&.dadActive{
+		background-color: $dadBackgColor;
+	}
+}
+.selector-active .top{
+	top: -25px;
+}
+.selector-active .bottom{
+	bottom: -25px;
+}
+.selector-active .top:before,
+.selector-active .bottom:before{
+	content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $navColor;
+	outline: none;
+	border: none;
+	-webkit-appearance: none;
+	
+}
+.selector-active .top:before{
+	left: -25px;
+	top: -25px;
+}
+.selector-active .bottom:before{
+	bottom: -25px;
+	left: -25px;
+}
+
+
+
+
+
+
+
+
+.selector-active .top{
+	
+	&::before{
+	
+	}
+	&.active::before{
+		background-color: $navDadColor;
+	}
+	&.jamesActive::before{
+background-color: $dadListItems;
+	}
+
+
+}
+
+
+
+
+.selector-active .bottom{
+	
+	&::before{
+	
+	}
+	&.active::before{
+		background-color: $navDadColor;
+	}
+	&.jamesActive::before{
+		background-color: $dadListItems;
+	}
+
+
+}
+
+
+
